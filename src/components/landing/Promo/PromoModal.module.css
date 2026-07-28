@@ -1,0 +1,66 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: rgba(5, 5, 5, 0.82);
+  backdrop-filter: blur(20px);
+  animation: fadeIn 250ms ease;
+}
+
+.frame {
+  position: relative;
+  width: min(86vmin, 1080px);
+  height: min(86vmin, 1080px);
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+  background: #0a0a0a;
+}
+
+.close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-overlay);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.close:hover {
+  background: var(--color-bg-card);
+  transform: scale(1.05);
+}
+
+[dir='rtl'] .close {
+  right: auto;
+  left: -14px;
+}
+
+@media (max-width: 520px) {
+  .close {
+    top: 8px;
+    right: 8px;
+  }
+  [dir='rtl'] .close {
+    left: 8px;
+  }
+}

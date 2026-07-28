@@ -1,0 +1,16 @@
+.spinner {
+  display: inline-block;
+  border: 2px solid var(--color-border-light);
+  border-top-color: var(--color-lime);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg-base);
+}

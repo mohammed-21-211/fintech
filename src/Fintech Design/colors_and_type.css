@@ -1,0 +1,207 @@
+/* ============================================================
+   Fintech Design System — Tokens
+   Dark theme · Lime accent · Bilingual (EN / AR)
+   Lifted 1:1 from fintech/src/index.css
+   ============================================================ */
+
+/* Brand font — Montserrat (variable, regular + italic), loaded locally.
+   This supersedes the codebase's declared Inter. See README "Typography".
+
+   No Arabic font file was provided; Noto Sans Arabic is still pulled from
+   Google Fonts as a substitution — flagged in README. */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;900&display=swap');
+
+:root {
+  /* ── BRAND / ACCENT ────────────────────────────── */
+  --color-lime:         #D4F03C;   /* primary signal — buttons, focus, brand mark */
+  --color-lime-dark:    #B8D832;   /* hover state on primary buttons */
+  --color-lime-glow:    rgba(212, 240, 60, 0.15);
+  --color-lime-muted:   rgba(212, 240, 60, 0.08);
+
+  /* ── SURFACE / BACKGROUND SCALE ────────────────── */
+  --color-bg-base:      #0A0A0A;   /* page */
+  --color-bg-elevated:  #111111;   /* sidebar, sticky chrome */
+  --color-bg-surface:   #161616;   /* cards, panels */
+  --color-bg-overlay:   #1E1E1E;   /* tooltips, dropdowns, ghost-hover */
+  --color-bg-card:      #1A1A1A;   /* default Card primitive */
+  --color-bg-input:     #141414;   /* form inputs */
+
+  /* ── BORDER ────────────────────────────────────── */
+  --color-border:       #262626;
+  --color-border-light: #2E2E2E;   /* hover-emphasized */
+  --color-border-focus: #D4F03C;
+
+  /* ── TEXT ──────────────────────────────────────── */
+  --color-text-primary:   #FFFFFF;
+  --color-text-secondary: #888888;
+  --color-text-tertiary:  #555555;
+  --color-text-inverse:   #0A0A0A;  /* on lime / light backgrounds */
+
+  /* ── SEMANTIC ──────────────────────────────────── */
+  --color-success:       #4ADE80;
+  --color-success-bg:    rgba(74, 222, 128, 0.12);
+  --color-error:         #F87171;
+  --color-error-bg:      rgba(248, 113, 113, 0.12);
+  --color-warning:       #FACC15;
+  --color-warning-bg:    rgba(250, 204, 21, 0.12);
+  --color-info:          #60A5FA;
+  --color-info-bg:       rgba(96, 165, 250, 0.12);
+
+  /* Orange CTA — appears in footer / secondary callouts only */
+  --color-orange:        #FF6B2B;
+  --color-orange-dark:   #E55A1E;
+
+  /* ── TYPOGRAPHY ────────────────────────────────── */
+  --font-family:    'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-ar: 'Noto Sans Arabic', 'Montserrat', sans-serif;
+
+  --font-size-xs:   0.75rem;     /* 12px */
+  --font-size-sm:   0.875rem;    /* 14px */
+  --font-size-base: 1rem;        /* 16px */
+  --font-size-lg:   1.125rem;    /* 18px */
+  --font-size-xl:   1.25rem;     /* 20px */
+  --font-size-2xl:  1.5rem;      /* 24px */
+  --font-size-3xl:  1.875rem;    /* 30px */
+  --font-size-4xl:  2.25rem;     /* 36px */
+  --font-size-5xl:  3rem;        /* 48px */
+  --font-size-6xl:  3.75rem;     /* 60px */
+  --font-size-7xl:  4.5rem;      /* 72px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold:600;
+  --font-weight-bold:    700;
+  --font-weight-black:   900;    /* used for ALL headings */
+
+  --line-height-tight:  1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed:1.7;
+
+  --letter-spacing-heading: -0.5px; /* tight; -1px on 4xl+, -2px on 7xl */
+  --letter-spacing-eyebrow: 2px;    /* upper-eyebrows, badges */
+
+  /* ── SPACING (4px grid) ────────────────────────── */
+  --space-1:  0.25rem;   --space-2:  0.5rem;   --space-3:  0.75rem;
+  --space-4:  1rem;      --space-5:  1.25rem;  --space-6:  1.5rem;
+  --space-8:  2rem;      --space-10: 2.5rem;   --space-12: 3rem;
+  --space-16: 4rem;      --space-20: 5rem;     --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── RADIUS ────────────────────────────────────── */
+  --radius-sm:   4px;    /* tiny chips */
+  --radius-md:   8px;    /* logo mark, icon tiles */
+  --radius-lg:   12px;   /* inputs, nav items */
+  --radius-xl:   16px;   /* small cards, toasts */
+  --radius-2xl:  24px;   /* primary cards (most used) */
+  --radius-full: 9999px; /* pills, buttons (ALL buttons are pills) */
+
+  /* ── SHADOWS ───────────────────────────────────── */
+  --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md:   0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-lime: 0 0 24px rgba(212, 240, 60, 0.2);  /* on-hover primary button */
+
+  /* ── MOTION ────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Z-LAYERS ──────────────────────────────────── */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+
+  /* ── LAYOUT ────────────────────────────────────── */
+  --sidebar-width:           240px;
+  --sidebar-collapsed-width: 72px;
+  --navbar-height:           72px;
+  --content-max-width:       1280px;
+}
+
+[dir='rtl'] {
+  --font-family: var(--font-family-ar);
+}
+
+/* ============================================================
+   Semantic Type Roles — apply these classes directly
+   ============================================================ */
+.ds-display {
+  /* hero headlines — Hero, CTA */
+  font-size: clamp(2.5rem, 5vw, var(--font-size-7xl));
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  letter-spacing: -2px;
+  color: var(--color-text-primary);
+}
+.ds-h1 {
+  /* page titles inside the app (Budgets, Settings) */
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.5px;
+  color: var(--color-text-primary);
+}
+.ds-h2 {
+  /* section titles on landing */
+  font-size: clamp(1.75rem, 3vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  letter-spacing: -1px;
+  color: var(--color-text-primary);
+}
+.ds-h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+.ds-body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+.ds-body-strong {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+.ds-caption {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+.ds-eyebrow {
+  /* uppercase, lime, hairline-tracked */
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-lime);
+}
+.ds-stat-value {
+  /* the "$24,563" treatment */
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.5px;
+  color: var(--color-text-primary);
+}
+.ds-numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}

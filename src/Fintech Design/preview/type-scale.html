@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Type — Scale</title>
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    html, body { margin: 0; background: var(--color-bg-base); color: var(--color-text-primary); }
+    body {
+      font-family: var(--font-family);
+      padding: 24px 28px;
+      width: 700px;
+      box-sizing: border-box;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 110px 1fr 64px;
+      align-items: baseline;
+      gap: 16px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .row:last-child { border-bottom: none; }
+    .name {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      font-variant-numeric: tabular-nums;
+    }
+    .specimen {
+      color: var(--color-text-primary);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .px {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body>
+  <div class="row"><span class="name">7xl · display</span><span class="specimen" style="font-size:42px">Aa</span><span class="px">72px</span></div>
+  <div class="row"><span class="name">6xl</span><span class="specimen" style="font-size:38px">Aa Bb</span><span class="px">60px</span></div>
+  <div class="row"><span class="name">5xl · cta</span><span class="specimen" style="font-size:34px">Money flow</span><span class="px">48px</span></div>
+  <div class="row"><span class="name">4xl · h2</span><span class="specimen" style="font-size:28px">Maximize savings</span><span class="px">36px</span></div>
+  <div class="row"><span class="name">3xl · auth title</span><span class="specimen" style="font-size:24px;font-weight:900">Welcome back</span><span class="px">30px</span></div>
+  <div class="row"><span class="name">2xl · h1 · stat</span><span class="specimen" style="font-size:20px;font-weight:900">$24,563</span><span class="px">24px</span></div>
+  <div class="row"><span class="name">xl · float-val</span><span class="specimen" style="font-size:18px;font-weight:700">Total balance</span><span class="px">20px</span></div>
+  <div class="row"><span class="name">lg · h3</span><span class="specimen" style="font-size:16px;font-weight:700">Recent transactions</span><span class="px">18px</span></div>
+  <div class="row"><span class="name">base · body</span><span class="specimen" style="font-size:14px;font-weight:400;letter-spacing:0">The default body size, 16px.</span><span class="px">16px</span></div>
+  <div class="row"><span class="name">sm · label</span><span class="specimen" style="font-size:13px;font-weight:500;letter-spacing:0;color:var(--color-text-secondary)">Input labels &amp; nav links</span><span class="px">14px</span></div>
+  <div class="row"><span class="name">xs · caption</span><span class="specimen" style="font-size:11px;font-weight:500;letter-spacing:0;color:var(--color-text-secondary)">Captions, deltas, helper text</span><span class="px">12px</span></div>
+</body>
+</html>

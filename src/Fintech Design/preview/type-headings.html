@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Type — Headings</title>
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    html, body { margin: 0; background: var(--color-bg-base); color: var(--color-text-primary); }
+    body {
+      font-family: var(--font-family);
+      padding: 20px 24px;
+      width: 700px;
+      box-sizing: border-box;
+    }
+    .stack { display: flex; flex-direction: column; gap: 12px; }
+    .item { display: grid; grid-template-columns: 86px 1fr; align-items: baseline; gap: 16px; }
+    .label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      padding-top: 4px;
+    }
+    .display {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -1.2px;
+      line-height: 1;
+    }
+    .accent { color: var(--color-lime); }
+    .h1 {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.4px;
+    }
+    .h2 {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.7px;
+      line-height: 1.05;
+    }
+    .h3 {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .body {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="stack">
+    <div class="item">
+      <span class="label">Display · hero</span>
+      <span class="display">Maximize Your<br/><span class="accent">Money Flow.</span></span>
+    </div>
+    <div class="item">
+      <span class="label">H2 · landing section</span>
+      <span class="h2">The role of Fintech in the payment system</span>
+    </div>
+    <div class="item">
+      <span class="label">H1 · app page</span>
+      <span class="h1">Budgets</span>
+    </div>
+    <div class="item">
+      <span class="label">H3 · card title</span>
+      <span class="h3">Recent transactions</span>
+    </div>
+    <div class="item">
+      <span class="label">Body · description</span>
+      <span class="body">Visualize your spending patterns, track income sources, and make informed financial decisions with powerful analytics.</span>
+    </div>
+  </div>
+</body>
+</html>

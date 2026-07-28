@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__d367d5a8-1fa0-48d8-af6d-2373cc8382cb__get_screenshot",
+      "mcp__d367d5a8-1fa0-48d8-af6d-2373cc8382cb__get_design_context",
+      "mcp__d367d5a8-1fa0-48d8-af6d-2373cc8382cb__use_figma",
+      "Bash(curl -s -o /tmp/fintech_landing.png \"https://www.figma.com/api/mcp/asset/f43d03cb-4786-4537-a2e8-46d95588dd3b\")",
+      "Bash(ls -la /Users/mhmdhsyn/Downloads/react-js/fintech/ && echo \"---\" && ls -la /Users/mhmdhsyn/Downloads/react-js/ 2>/dev/null | head -20)",
+      "Bash(npm create *)",
+      "Bash(npx tsc *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(awk -F: '{print $1}')",
+      "Bash(ls -la .claude)",
+      "Bash(cat .claude/launch.json)",
+      "Bash(sed -n '1,120p' src/App.tsx)",
+      "Bash(sed -n '60,110p' src/store/index.ts)",
+      "Bash(echo \"tsc exit code: $?\")",
+      "Bash(xargs ls -la)",
+      "Bash(echo \"tsc exit: $?\")"
+    ]
+  }
+}
